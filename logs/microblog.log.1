@@ -1,0 +1,125 @@
+2018-12-10 14:01:59,206 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 14:02:17,051 ERROR: Exception on /edit_profile [POST] [in D:\soft\python37\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\soft\python37\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\soft\python37\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\Pythonworkapace\microblog\application\routes.py", line 100, in edit_profile
+    db.session.commit()
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\orm\session.py", line 943, in commit
+    self.transaction.commit()
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\orm\session.py", line 467, in commit
+    self._prepare_impl()
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\orm\session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\orm\session.py", line 2254, in flush
+    self._flush(objects)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\orm\session.py", line 2380, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\util\compat.py", line 249, in reraise
+    raise value
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\orm\session.py", line 2344, in _flush
+    flush_context.execute()
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 556, in execute
+    uow
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\orm\persistence.py", line 177, in save_obj
+    mapper, table, update)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\orm\persistence.py", line 768, in _emit_update_statements
+    execute(statement, multiparams)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
+    context)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\util\compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\util\compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "D:\soft\python37\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username [SQL: 'UPDATE user SET username=?, about_me=? WHERE user.id = ?'] [parameters: ('aaa', 'aaa', 5)] (Background on this error at: http://sqlalche.me/e/gkpj)
+2018-12-10 14:03:23,226 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 14:21:59,011 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 14:22:05,635 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 14:22:11,069 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 14:43:06,590 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 14:50:21,397 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 14:55:08,221 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 14:57:52,977 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 15:00:49,829 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 15:07:36,341 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 15:12:44,895 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 15:12:48,244 ERROR: Exception on /index [GET] [in D:\soft\python37\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\soft\python37\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\soft\python37\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\Pythonworkapace\microblog\application\routes.py", line 38, in index
+    next_url = url_for('index', page=posts.next_num) if posts.has_next else None
+AttributeError: 'list' object has no attribute 'has_next'
+2018-12-10 15:12:59,613 ERROR: Exception on /index [GET] [in D:\soft\python37\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\soft\python37\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\soft\python37\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\soft\python37\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\Pythonworkapace\microblog\application\routes.py", line 38, in index
+    next_url = url_for('index', page=posts.next_num) if posts.has_next else None
+AttributeError: 'list' object has no attribute 'has_next'
+2018-12-10 15:15:06,840 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 15:18:11,379 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:53]
+2018-12-10 16:11:46,689 INFO: Microblog startup [in E:\Pythonworkapace\microblog\application\__init__.py:56]
