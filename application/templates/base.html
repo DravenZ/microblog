@@ -38,7 +38,7 @@
 
 {% block content %}
     <div style="padding: 0 30px">
-    {% block style %}
+    {% block contents %}
     <div class="container" style="margin-right: auto;margin-left: auto;">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -51,7 +51,7 @@
         {# application content needs to be provided in the app_content block #}
         {% block app_content %}{% endblock %}
     </div>
-    {% endblock style %}
+    {% endblock contents %}
     </div>
 {% endblock %}
 {% endblock body %}
