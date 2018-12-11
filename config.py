@@ -15,7 +15,7 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     POSTS_PER_PAGE = 15
-
+    LANGUAGES = ['en', 'es']
     # 配置邮件服务器
     MAIL_SERVER = os.environ.get('MAIL_SERVER') or 'smtp.exmail.qq.com'
     MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)
