@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
-{% block style %}
+
+{% block content %}
+    <div align="center">
+{% block contents %}
+
     <h1>Sign In</h1>
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
@@ -27,4 +31,7 @@
             <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
         </p>
     </form>
+
 {% endblock %}
+    </div>
+{% endblock content %}
